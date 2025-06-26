@@ -1,12 +1,40 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8">
   <title>My Dashboard</title>
-  <style>body, html { height: 100%; margin: 0; }</style>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no">
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      overflow: hidden;
+    }
+    iframe {
+      border: none;
+      width: 100%;
+      height: 100vh;
+    }
+
+    /* Optional: Redirect to dashboard directly on mobile for better experience */
+    @media (max-width: 767px) {
+      iframe {
+        display: none;
+      }
+    }
+  </style>
+  <script>
+    // Optional: redirect mobile users to the full dashboard (better UI/UX)
+    if (window.innerWidth < 768) {
+      window.location.href = "https://osugisci.maps.arcgis.com/apps/dashboards/beb0c4ba36724b38b0547402dcecca16";
+    }
+  </script>
 </head>
 <body>
-  <iframe src="https://osugisci.maps.arcgis.com/apps/dashboards/beb0c4ba36724b38b0547402dcecca16"
-          width="100%" height="100%" frameborder="0" allowfullscreen>
+  <iframe 
+    src="https://osugisci.maps.arcgis.com/apps/dashboards/beb0c4ba36724b38b0547402dcecca16"
+    allowfullscreen>
   </iframe>
 </body>
 </html>
