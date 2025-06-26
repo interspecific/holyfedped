@@ -17,19 +17,8 @@
       height: 100vh;
     }
 
-    /* Optional: Redirect to dashboard directly on mobile for better experience */
-    @media (max-width: 767px) {
-      iframe {
-        display: none;
-      }
-    }
   </style>
-  <script>
-    // Optional: redirect mobile users to the full dashboard (better UI/UX)
-    if (window.innerWidth < 768) {
-      window.location.href = "https://osugisci.maps.arcgis.com/apps/dashboards/beb0c4ba36724b38b0547402dcecca16";
-    }
-  </script>
+
 </head>
 <body>
   <iframe 
